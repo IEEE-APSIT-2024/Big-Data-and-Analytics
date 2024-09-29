@@ -34,8 +34,8 @@ The project focuses on solving a [briefly describe the problem here]. The data i
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo-name/spark-databricks-project.git
-   cd spark-databricks-project
+   git clone https://github.com/IEEE-APSIT-2024/Big-Data-and-Analytics.git
+   cd Big-Data-and-Analytics
 2.**Set up Databricks Workspace**:
 
  a.**Sign in to your Databricks account**.
