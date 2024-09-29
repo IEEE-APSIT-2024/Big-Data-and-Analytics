@@ -40,3 +40,16 @@ The project focuses on solving a [briefly describe the problem here]. The data i
    ```bash
    git clone https://github.com/your-repo-name/spark-databricks-project.git
    cd spark-databricks-project
+2.**Set up Databricks Workspace**:
+
+ a.**Sign in to your Databricks account**.
+ b.**Import the `.ipynb` file** into your Databricks workspace.
+ c.**Install necessary libraries**: Ensure you have installed the following libraries within the Databricks environment:
+
+   ```bash
+   pip install pyspark delta-spark
+
+Running the Code
+Import the notebook from this repository into your Databricks environment.
+Attach the notebook to a running Databricks cluster.
+Run each cell sequentially to see the analysis results.
