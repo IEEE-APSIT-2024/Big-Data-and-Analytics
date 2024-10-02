@@ -1,3 +1,26 @@
+# WHY BIG DATA ?
+
+## Vs in Big Data
+![image](https://github.com/user-attachments/assets/0f87cb8e-06eb-42bd-9c26-2987c0e5bf4c)
+
+## Big data arch
+![image](https://github.com/user-attachments/assets/aa07d47b-468a-4e47-b78c-f1b583bc18e4)
+
+# HADOOP
+![hadoop](https://github.com/user-attachments/assets/adfba0f5-9322-4d71-a7b9-a28a72ae71c1)
+
+## hadoop arch: 
+![hadooparch](https://github.com/user-attachments/assets/22596a12-0791-41e2-a53a-75680019f507)
+
+## HDFS:
+![hdfs](https://github.com/user-attachments/assets/be3e67cc-42e2-48bb-a82b-e296de43025e)
+
+## MapReduce:
+![mapreduce](https://github.com/user-attachments/assets/f04a552c-0fa2-4c80-a535-838bdd75eaac)
+
+
+
+
 
 # Spark Big Data Analysis on Databricks
 
