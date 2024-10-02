@@ -5,9 +5,16 @@ This guide provides a detailed explanation of PySpark basics, based on the Jupyt
 ## Setting up PySpark
 
 ```python
+!pip install spark
+spark
+import spark
+```
+
+
+```python
 from pyspark.sql import SparkSession
 
-spark = SparkSession.builder.appName('Dataframe').getOrCreate()
+spark=SparkSession.builder.appName('Practise').getOrCreate()
 ```
 
 These lines import the necessary PySpark module and create a SparkSession. The SparkSession is the entry point for programming Spark with the Dataset and DataFrame API.
@@ -18,7 +25,7 @@ These lines import the necessary PySpark module and create a SparkSession. The S
 ## Loading Data
 
 ```python
-df_pyspark = spark.read.option('header', 'true').csv('/FileStore/tables/test1.csv', inferSchema=True)
+df_pyspark = spark.read.option('header', 'true').csv('/FileStore/tables/test2.csv', inferSchema=True)
 ```
 
 This line reads a CSV file and creates a PySpark DataFrame.
@@ -142,11 +149,61 @@ df_pyspark.groupBy('Name').avg().show()
 
 This groups the data by 'Name' and calculates the average of all numeric columns for each group.
 
+
+## Reading JSON Files
+
+### Single Line JSON
+
 ```python
-df_pyspark.groupBy('Departments').mean().show()
+json_file_path = "/FileStore/tables/products_singleline.json"
+df = spark.read.json(json_file_path)
 ```
 
-This groups the data by 'Departments' and calculates the mean of all numeric columns for each group.
+This code reads a JSON file where each line is a complete JSON object. Spark automatically infers the schema from the JSON structure.
 
-These operations demonstrate the power and flexibility of PySpark for data manipulation and analysis. PySpark allows for efficient processing of large datasets by distributing the computation across a cluster of computers.
+### Multi-line JSON
 
+```python
+json_file_path = "/FileStore/tables/products_multiline.json"
+df = spark.read.json(json_file_path, multiLine=True)
+```
+
+This code reads a JSON file where JSON objects may span multiple lines. The `multiLine=True` option is crucial for correctly parsing this format.
+
+## Writing and Reading Parquet Files
+
+### Writing to Parquet
+
+```python
+parquet_file_path = "./data/products.parquet"
+df.write.parquet(parquet_file_path)
+```
+
+This code writes the DataFrame to a Parquet file. Parquet is a columnar storage format that's highly efficient for analytics workloads.
+
+### Reading from Parquet
+
+```python
+df = spark.read.parquet(parquet_file_path)
+```
+
+This code reads a Parquet file into a DataFrame. Parquet files include schema information, so Spark can efficiently read them without additional schema specification.
+
+## Utility Operations
+
+Throughout the notebook, these operations are used to inspect the DataFrames:
+
+```python
+df.printSchema()  # Displays the schema of the DataFrame
+df.show(5)  # Displays the first 5 rows of the DataFrame
+```
+
+These are crucial for verifying that the data has been read correctly and understanding its structure.
+
+## Closing the SparkSession
+
+```python
+spark.stop()
+```
+
+This command stops the SparkSession and releases all associated resources. It's good practice to call this at the end of your Spark applications.
