@@ -1,4 +1,6 @@
-# WHY BIG DATA ?
+# WHY BIG DATA ANALYTICS ?
+![bda](https://github.com/user-attachments/assets/2eae582e-baa8-414e-a219-1d80f63c85dc)
+
 
 ## Vs in Big Data
 ![image](https://github.com/user-attachments/assets/0f87cb8e-06eb-42bd-9c26-2987c0e5bf4c)
