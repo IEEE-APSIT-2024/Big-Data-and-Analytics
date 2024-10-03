@@ -91,9 +91,13 @@ Resilient Distributed Datasets (RDDs) are the fundamental building blocks of Apa
 ![image](https://github.com/user-attachments/assets/6ca021f6-8f13-4d78-bc61-e8006265d48a)
 
 a) Spark Core: The foundation that provides distributed task dispatching, scheduling, and basic I/O functionalities.
+
 b) Spark SQL: Module for working with structured data.
+
 c) Spark Streaming: For processing real-time streaming data.
+
 d) MLlib: A distributed machine learning framework.
+
 e) GraphX: A distributed graph processing framework.
 
 
