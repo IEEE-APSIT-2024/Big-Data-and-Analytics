@@ -170,24 +170,6 @@ df = spark.read.json(json_file_path, multiLine=True)
 
 This code reads a JSON file where JSON objects may span multiple lines. The `multiLine=True` option is crucial for correctly parsing this format.
 
-## Writing and Reading Parquet Files
-
-### Writing to Parquet
-
-```python
-parquet_file_path = "./data/products.parquet"
-df.write.parquet(parquet_file_path)
-```
-
-This code writes the DataFrame to a Parquet file. Parquet is a columnar storage format that's highly efficient for analytics workloads.
-
-### Reading from Parquet
-
-```python
-df = spark.read.parquet(parquet_file_path)
-```
-
-This code reads a Parquet file into a DataFrame. Parquet files include schema information, so Spark can efficiently read them without additional schema specification.
 
 ## Utility Operations
 
