@@ -33,6 +33,39 @@ and Structured Streaming for stream processing.
 
 <https://spark.apache.org/>
 
+# Why that Spark?
+
+Apache Spark’s main advantage is **speed—it** performs in-memory computations, avoiding disk I/O for intermediate results, unlike Hadoop, which writes to disk between each step of the MapReduce process. Spark is often 100x faster in-memory and 10x faster on disk. Here’s why Spark is a game-changer:
+
+1) In-Memory Computation
+2) Unified Data Processing
+3) Ease of Use 
+4) Fault Tolerance
+
+![image](https://github.com/user-attachments/assets/7c2a36ec-3274-4985-8ef0-fd1b19ec24f6)
+
+The Apache Spark framework uses a **master-slave architecture** 
+The architecture of Spark is divided into the following components:
+
+Driver Program: It is the main application entry point that creates SparkContext (the gateway to Spark) and uses this to coordinate with the workers.
+Cluster Manager: Manages resource allocation for the Spark application (e.g., YARN, Mesos).
+Worker Nodes: They run on the nodes in the cluster and execute tasks assigned by the Driver.
+
+# What is Scala?
+
+
+# RDD in use?
+
+# Spark Components: Here we go again!
+
+![image](https://github.com/user-attachments/assets/6ca021f6-8f13-4d78-bc61-e8006265d48a)
+
+Spark Core: The foundation that provides distributed task dispatching, scheduling, and basic I/O functionalities.
+Spark SQL: Module for working with structured data.
+Spark Streaming: For processing real-time streaming data.
+MLlib: A distributed machine learning framework.
+GraphX: A distributed graph processing framework.
+
 # Spark Big Data Analysis on Databricks
 
 ## Project Overview
